@@ -1,1 +1,37 @@
-//start here
+//Task 1: Create the Order System
+let orderSystem = [
+    ['Latte','Tea','Espresso'], //drink list: index 0
+    ['Croissant','Muffin','Bagel'] //pastry list: index 1
+];
+
+//Task 2: Log the drinks and pasteries
+console.log('There are', orderSystem[0].length, 'drinks.'); //length of the first nested array
+console.log('There are', orderSystem[1].length, 'pastries.'); //length of the second nested array
+
+//Task 3: Access Orders Using Bracket Notation
+let order1 = orderSystem[0][0] + " and a " + orderSystem[1][0]; //bracket notation for accessing both nested arrays
+console.log('First Order is a', order1 + '!');
+let order2 = orderSystem[1][2]; //bracket notation for accessing the 2nd array
+console.log('Second Order is a', order2 + '!');
+let order3 = orderSystem[0][2]; //bracket notation for accessing the 1st array
+console.log('Third Order is an', order3 + '!');
+
+//Task 4: Access Orders Dynamically with Variables
+let indexOfDrinks = 0; //first nested array
+let drink = 1; //second item in array
+let indexOfPastries = 1; //second nested array
+let pastry = 1 //second item in second nested array
+console.log('I ordered a', orderSystem[indexOfDrinks][drink], 'and a', orderSystem[indexOfPastries][pastry], 'to-go!');
+
+//Task 5: 
+let i = 0
+for (let j = 0; j < orderSystem[i].length; j++) { //j increases by increments of 1, starting from index 0
+    console.log(orderSystem[i][j], 'is a drink on the menu.'); //will repeat until all drink orders are returned, nothing outside the array
+}
+
+//Task 6: Add a New Order & Track Length
+let newDrink = orderSystem[0].push('flat white'); //adding an item at the END of the first nested array
+console.log('There are now', newDrink, 'drinks on the menu!'); //newDrink returns orderSystems new length
+let drinkList = 0 //index of drink list
+let drinks = 3 //added drink from earlier
+console.log('The customer ordered a', orderSystem[drinkList][drinks] + '!');
